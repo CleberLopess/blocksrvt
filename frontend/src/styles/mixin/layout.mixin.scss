@@ -1,0 +1,41 @@
+$screen-sm-min: 768px;
+
+$screen-md-min: 1200px;
+
+$screen-lg-min: 1720px;
+
+@mixin layoutGrid {
+  article {
+    width: 90%;
+    max-width: 1329px;
+    margin: 0 auto;
+
+    @media (min-width: #{$screen-sm-min}) {
+      width: calc(100% - 30px);
+    }
+
+    @media (min-width: #{$screen-md-min}) {
+      width: calc(100% - 45px);
+    }
+  }
+
+  @content;
+}
+
+@mixin media-tablet {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin media-md-desktop {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin media-lg-desktop {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}

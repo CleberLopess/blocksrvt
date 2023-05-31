@@ -1,0 +1,47 @@
+@import "styles/mixin/layout.mixin.scss";
+@import "styles/theme/colors.theme.scss";
+@import "styles/theme/typography.theme.scss";
+
+.wrapper {
+  @include label_fixed_bar;
+  background-color: BSColors($bg-black);
+  color: BSColors($text-secondary);
+  padding: 24px 14px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+
+  .contentFixedBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .closeButton {
+    background-color: transparent;
+    border: none;
+    color: BSColors($text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  @include media-md-desktop {
+    bottom: unset;
+    top: 0;
+    position: relative;
+
+    .contentFixedBar {
+      flex-direction: row;
+    }
+
+    .closeButton {
+      display: none;
+    }
+  }
+}

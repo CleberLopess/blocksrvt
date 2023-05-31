@@ -1,0 +1,29 @@
+@import "styles/mixin/layout.mixin.scss";
+@import "styles/theme/colors.theme.scss";
+@import "styles/theme/typography.theme.scss";
+
+.contentHeader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 17px;
+  transition: all 0.3s;
+  border-bottom: 1px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-image: BSColors($graditent) 1;
+
+  .linkLogo {
+    .imageArrow {
+      width: 92px;
+      transition: all 0.3s;
+
+      @include media-md-desktop {
+        width: 146px;
+      }
+    }
+  }
+}

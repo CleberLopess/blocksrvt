@@ -1,0 +1,61 @@
+@import "../mixin/layout.mixin.scss";
+
+$mainFont: "Open Sans";
+
+@mixin title_page {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  @include media-md-desktop {
+    font-size: 1.75rem;
+  }
+}
+
+@mixin label_card {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.625rem;
+}
+
+@mixin title_section {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+
+  @include media-md-desktop {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin label_footer {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+
+  @include media-md-desktop {
+    font-size: 1rem;
+  }
+}
+
+@mixin label_fixed_bar {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.938rem;
+
+  @include media-md-desktop {
+    font-size: 1.125rem;
+  }
+}
+
+@mixin label_button {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+}

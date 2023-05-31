@@ -1,0 +1,94 @@
+@import "styles/mixin/layout.mixin.scss";
+@import "styles/theme/colors.theme.scss";
+@import "styles/theme/typography.theme.scss";
+
+.contentCard {
+  border: 1px solid BSColors($border-card);
+  background-color: BSColors($text-secondary);
+  border-radius: 8px;
+  width: 138px;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  .contentImage {
+    padding: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    .image {
+      display: flex;
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .contentFooter {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    border-top: 1px;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: BSColors($border-card);
+    background: linear-gradient(180deg, #fefefe 0%, #f8f8f8 100%);
+    border-radius: 0 0 8px 8px;
+
+    .label {
+      @include label_card;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      padding-right: 8px;
+    }
+
+    .contentLink {
+      position: relative;
+      padding-left: 8px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        width: 1px;
+        height: 100%;
+        background-color: BSColors($border-card);
+      }
+    }
+
+    .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    .contentImage {
+      transform: scale(1.1);
+    }
+  }
+
+  @include media-md-desktop {
+    width: 176px;
+
+    .contentFooter {
+      .label {
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+}

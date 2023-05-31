@@ -1,0 +1,31 @@
+@import "styles/mixin/layout.mixin.scss";
+@import "styles/theme/colors.theme.scss";
+@import "styles/theme/typography.theme.scss";
+
+.wrapper {
+  margin-top: 28px;
+  height: 100%;
+  overflow: auto;
+
+  .contentArticle {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .label {
+      @include title_section;
+    }
+
+    .contentCards {
+      margin-bottom: 42px;
+    }
+  }
+
+  @include media-md-desktop {
+    .contentArticle {
+      .contentCards {
+        gap: 16px 15.83px;
+      }
+    }
+  }
+}

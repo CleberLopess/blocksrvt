@@ -1,0 +1,21 @@
+$text-primary: "primary";
+$text-secondary: "secondary";
+$bg-white: "bg-white";
+$border-card: "border-card";
+$graditent: "gradient";
+$bg-black: "bg-black";
+$light-gray: "light-gray";
+
+$colors: (
+  $text-primary: #202020,
+  $text-secondary: #ffffff,
+  $bg-white: #fbfbfb,
+  $border-card: #cccccc,
+  $graditent: linear-gradient(90deg, #a11cf3 0%, #d835c5 100%),
+  $bg-black: #242424,
+  $light-gray: #e9e9e9,
+);
+
+@function BSColors($color-name) {
+  @return map-get($colors, $color-name);
+}

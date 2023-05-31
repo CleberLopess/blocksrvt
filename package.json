@@ -1,5 +1,10 @@
 {
   "scripts": {
     "start-project": "(cd backend && yarn && yarn start) & (cd frontend && yarn && yarn dev)"
+  },
+  "dependencies": {
+    "@types/react-infinite-scroll-component": "^5.0.0",
+    "infinite-scroll": "^4.0.1",
+    "react-infinite-scroll-component": "^6.1.0"
   }
 }
